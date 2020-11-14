@@ -12,8 +12,8 @@ export default function Template({
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.title} | {siteMetadata.title}</title>
-        <meta name="description" content={frontmatter.metaDescription} />
+        {/* <title>{frontmatter.title} | {siteMetadata.title}</title>
+        <meta name="description" content={frontmatter.metaDescription} /> */}
       </Helmet>
       <div className="blog-post-container">
         <article className="post">

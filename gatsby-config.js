@@ -16,58 +16,67 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images`,
         path: `${__dirname}/src/images`,
-        name: 'images',
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
           },
-        },
-        {
-          resolve: 'gatsby-remark-emojis',
-        }],
+          {
+            resolve: "gatsby-remark-emojis",
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it. replace with yours
-        trackingId: "UA-164743872-1",
+        trackingId: "UA-102291360-6",
         head: true,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Mouhamed Aly Blog`,
+        short_name: `MAS`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#381696`,
+        background_color: `#ffffff`,
+        theme_color: `#1e35cd`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
     },
-    `gatsby-plugin-sass`, 
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://masblog.netlify.app/',
+        sitemap: 'https://masblog.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-dark-mode',
-    // siteURL is a must for sitemap generation
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`
   ],
-}
+};
