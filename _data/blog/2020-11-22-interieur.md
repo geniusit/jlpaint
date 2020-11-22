@@ -19,8 +19,6 @@ metaDescription: Réalisations intérieures
 ![23](/assets/23.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
 ![24](/assets/24.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
 ![26](/assets/26.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
-![28](/assets/28.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
-![30](/assets/30.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
 ![31](/assets/31.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
 ![32](/assets/32.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
 ![33](/assets/33.png#lightbox=true;display=block;margin-left=auto;margin-right=auto;width=50%)
