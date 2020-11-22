@@ -3,20 +3,12 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import Avatar from "../images/avatar.svg";
 import { useNetworkStatus } from "react-adaptive-hooks/network";
-import HeroFooter from "./heroFooter";
 export default () => {
   const { effectiveConnectionType } = useNetworkStatus();
   const data = useStaticQuery(graphql`
-    query HeadingQuery {
-      site {
-        siteMetadata {
-          home {
-            title
-            description
-          }
-        }
-      }
-      image: file(relativePath: { eq: "avatar.png" }) {
+    query {
+      
+      image: file(relativePath: { eq: "1.png" }) {
         id
         childImageSharp {
           fixed {
@@ -32,34 +24,22 @@ export default () => {
   `);
 
   return (
-    <div className="hero-header">
-      <div className="desc">
-        { <div className="headline">{data.site.siteMetadata.home.title}</div> }
-       {  <div
-          className="primary-content"
-          dangerouslySetInnerHTML={{
-            __html: data.site.siteMetadata.home.description,
-          }}
-        /> }
-        {/* <Link to="/contact" className="button -primary">
-          Get in touch &rarr;
-        </Link> */}
-      </div>
-      <div className="avatar ">
-
+    <div >
+      
+        
+      <div >
         {effectiveConnectionType == "2g" ||
         effectiveConnectionType == "slow-2g" ? (
           <img className="center" src={Avatar} />
         ) : (
           <Img
-            className="center float-left"
+            className="center"
             alt="profil"
             fluid={data.image.childImageSharp.fluid}
             fadeIn={true}
           />
         )}
       </div>
-          <HeroFooter />
     </div>
   );
 };

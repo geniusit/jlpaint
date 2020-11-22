@@ -106,12 +106,13 @@ a {
 }
 .hero-header {
   padding: 0 0 64px;
-  max-width: 980px;
+  /* max-width: 980px; */
 }
 .headline {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 900;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 .button {
   padding: 18px 27px;
@@ -145,6 +146,7 @@ a {
   margin-bottom: 32px;
   line-height: 1.5;
   font-weight: 300;
+  text-align: center;
 }
 .post {
   padding: 0;
@@ -408,5 +410,9 @@ body.light {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
+}
+
+.float-left {
+  float:left;
 }
